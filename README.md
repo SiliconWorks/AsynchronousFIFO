@@ -40,4 +40,14 @@ FULL (N): All entries occupied, write disabled, read enabled
 
 🔸Full/Empty flag logic driven by synchronized pointers.
 
+<u>Tools & Hardware Used</u>
+
+FPGA: ZedBoard Zynq-7000
+
+HDL Tool: AMD Vivado 2024 Edition
+
+Language: Verilog HDL
+
+Verification: Vivado Simulator / Testbench for functional validation
+
 
