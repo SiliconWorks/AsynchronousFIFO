@@ -1,0 +1,118 @@
+`timescale 1ns / 1ps
+
+module top_asyncfifo (
+    input  wire        clk,        // 100 MHz board clock
+    input  wire        rst,        // BTNU (ASYNC RESET)
+
+    input  wire        sw_wr,      // BTNC (Write)
+    input  wire        sw_rd,      // BTNR (Read)
+    input  wire [7:0]  sw_data,    // SW0-SW7 (FIFO input)
+
+    output wire [7:0]  fifo_dout,  // PMOD JB1 (FIFO output)
+    output wire [7:0]  led         // LD0-LD7 (STATUS)
+);
+
+    // =====================================================
+    // CLOCK GENERATION BLOCK (WRITE / READ CLOCKS)
+    // =====================================================
+    wire wr_clk = clk;   // 100 MHz write clock
+
+    reg rd_clk = 0;
+    always @(posedge clk)
+        rd_clk <= ~rd_clk;   // ~50 MHz read clock (demo purpose)
+
+    // =====================================================
+    // RESET DISTRIBUTION (ASYNC ASSERT, SYNC DEASSERT)
+    // IMPORTANT: SAME RESET fed to FIFO (NO OR-ing)
+    // =====================================================
+    wire fifo_rst = rst;
+
+    // =====================================================
+    // WRITE ENABLE SYNC + EDGE DETECT BLOCK
+    // =====================================================
+    reg sw_wr_ff1, sw_wr_ff2, wr_en_d;
+
+    always @(posedge wr_clk) begin
+        sw_wr_ff1 <= sw_wr;
+        sw_wr_ff2 <= sw_wr_ff1;
+        wr_en_d   <= sw_wr_ff2;
+    end
+
+    wire wr_en_pulse = sw_wr_ff2 & ~wr_en_d;  // ONE CLOCK WRITE
+
+    // =====================================================
+    // READ ENABLE SYNC + EDGE DETECT BLOCK
+    // =====================================================
+    reg sw_rd_ff1, sw_rd_ff2, rd_en_d;
+
+    always @(posedge rd_clk) begin
+        sw_rd_ff1 <= sw_rd;
+        sw_rd_ff2 <= sw_rd_ff1;
+        rd_en_d   <= sw_rd_ff2;
+    end
+
+    wire rd_en_pulse = sw_rd_ff2 & ~rd_en_d;  // ONE CLOCK READ
+
+    // =====================================================
+    // FIFO SIGNALS
+    // =====================================================
+    wire [7:0] dout;
+    wire full, empty, almost_full, almost_empty;
+    wire overflow, underflow;
+
+    // =====================================================
+    // ASYNC FIFO INSTANCE
+    // =====================================================
+    asyncfifo dut (
+        .wr_clk(wr_clk),
+        .rd_clk(rd_clk),
+        .rst   (fifo_rst),     // ? CORRECT RESET
+
+        .wr_en(wr_en_pulse),
+        .rd_en(rd_en_pulse),
+        .din  (sw_data),
+
+        .dout (dout),
+        .full (full),
+        .empty(empty),
+        .almost_full(almost_full),
+        .almost_empty(almost_empty),
+        .overflow(overflow),
+        .underflow(underflow)
+    );
+
+    // =====================================================
+    // OUTPUT DATA
+    // =====================================================
+    assign fifo_dout = dout;
+
+    // =====================================================
+    // LED STATUS BLOCK
+    // =====================================================
+    assign led[0] = empty;
+    assign led[1] = almost_empty;
+    assign led[2] = full;
+    assign led[3] = almost_full;
+    assign led[4] = overflow;
+    assign led[5] = underflow;
+
+    // ================= WRITE / READ PULSE INDICATOR =================
+    reg [23:0] wr_led_cnt = 0;
+    reg [23:0] rd_led_cnt = 0;
+
+    always @(posedge clk) begin
+        if (wr_en_pulse)
+            wr_led_cnt <= 24'hFFFFFF;
+        else if (wr_led_cnt != 0)
+            wr_led_cnt <= wr_led_cnt - 1;
+
+        if (rd_en_pulse)
+            rd_led_cnt <= 24'hFFFFFF;
+        else if (rd_led_cnt != 0)
+            rd_led_cnt <= rd_led_cnt - 1;
+    end
+
+    assign led[6] = (wr_led_cnt != 0);  // WRITE EVENT
+    assign led[7] = (rd_led_cnt != 0);  // READ EVENT
+
+endmodule
