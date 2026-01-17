@@ -24,7 +24,7 @@ States    : Empty(0)  Almost Empty(1)  Partial conditio(2-5)  Almost Full(6)  Fu
 FSM states:
          INPUT → EMPTY → PARTIALLY FULL → FULL → OUTPUT
          
-Explanation:
+**Explanation:**
 
 EMPTY (0): No data, read disabled, write enabled
 
@@ -111,7 +111,7 @@ Indicates no unread data is available
 FULL (Write Domain):
 Indicates FIFO has reached maximum capacity
 
-**Simulation Waveform:**
+<h3><u>Simulation Waveform:</u></h3>
 
 This waveform represents the functional simulation of an Asynchronous FIFO where write and read operations occur in different clock domains (wr_clk and rd_clk). The FIFO safely transfers data across clock domains using synchronized pointers.
 
