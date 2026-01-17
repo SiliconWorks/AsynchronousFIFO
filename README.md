@@ -113,7 +113,9 @@ Indicates FIFO has reached maximum capacity
 
 <h3><u>Simulation Waveform:</u></h3>
 
-https://github.com/duraimurugan9168-svg/Asynchornous-FIFO-/blob/4ce28261f496cd185193f750b2570918b65af8d4/FILES/design   This waveform represents the functional simulation of an Asynchronous FIFO where write and read operations occur in different clock domains (wr_clk and rd_clk). The FIFO safely transfers data across clock domains using synchronized pointers.
+ This waveform represents the functional simulation of an Asynchronous FIFO where write and read operations occur in different clock domains (wr_clk and rd_clk). The FIFO safely transfers data across clock domains using synchronized pointers. The verilog design code for Asynchronous FIFO is given in the link below 
+
+https://github.com/duraimurugan9168-svg/Asynchornous-FIFO-/blob/4ce28261f496cd185193f750b2570918b65af8d4/FILES/design   
 
 <img width="1919" height="1030" alt="Screenshot 2026-01-09 121448" src="https://github.com/user-attachments/assets/3f8d0c22-b945-4276-bac6-70150a6a1cc2" />
 
