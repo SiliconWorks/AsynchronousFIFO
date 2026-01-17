@@ -50,11 +50,69 @@ Language: Verilog HDL
 
 Verification: Vivado Simulator / Testbench for functional validation
 
-<h3><u>  FSM States: </u></h3>
+<h3><u>  Read & Write operations: </u></h3>
 
-FSM state of asynchronous FIFO having the depth of 8
-<img width="1239" height="694" alt="Screenshot 2026-01-16 143321" src="https://github.com/user-attachments/assets/e820dee1-687f-46ca-b30b-460fb2653e56" />
+An Asynchronous FIFO enables safe data transfer between two independent clock domains using separate read and write pointers. There is no global FSM; instead, operation is controlled by pointer comparison and FULL/EMPTY flags.
 
+⚙️ Operational Principle
+
+Write side operates only on wr_clk
+
+Read side operates only on rd_clk
+
+Pointers are maintained in binary (for addressing) and Gray code (for CDC safety)
+
+Gray-coded pointers are synchronized across clock domains using 2-FF synchronizers
+
+✍️ Write & 📤 Read — Unified Flow
+On wr_clk (Write Domain)
+
+A write occurs when:
+
+wr_en = 1
+
+full = 0
+
+Actions:
+
+Write data to memory at the current write pointer address
+
+Increment the binary write pointer
+
+Convert the updated pointer to Gray code
+
+Synchronize the Gray-coded write pointer to the read domain
+On rd_clk (Read Domain)
+
+A read occurs when:
+
+rd_en = 1
+
+empty = 0
+
+Actions:
+
+Read data from memory at the current read pointer address
+
+Increment the binary read pointer
+
+Convert the updated pointer to Gray code
+
+Synchronize the Gray-coded read pointer to the write domain
+
+FULL & EMPTY Flag Generation
+
+EMPTY (Read Domain)
+Indicates no unread data is available
+
+FULL (Write Domain)
+Indicates FIFO has reached maximum capacity
+
+Example (FIFO Depth = 8)
+Stored Entries	Status
+0	   EMPTY
+1–7	 PARTIALLY FILLED
+8	   FULL
 
 
 
