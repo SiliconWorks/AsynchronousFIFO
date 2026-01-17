@@ -111,12 +111,6 @@ Indicates no unread data is available
 FULL (Write Domain):
 Indicates FIFO has reached maximum capacity
 
-**Example (FIFO Depth = 8):**
-
-Stored Entries	Status
-0	   EMPTY
-1–7	 PARTIALLY FILLED
-8	   FULL
 
 
 
