@@ -124,6 +124,10 @@ https://github.com/duraimurugan9168-svg/Asynchornous-FIFO-/blob/dcd3d1ff93411345
 This waveform represents the functional simulation of an Asynchronous FIFO where write and read operations occur in different clock domains (wr_clk and rd_clk). The FIFO safely transfers data across clock domains using synchronized pointers.
 <img width="1919" height="1030" alt="Screenshot 2026-01-09 121448" src="https://github.com/user-attachments/assets/81e0a436-21f1-4e77-87ca-c9984ef71c64" />
 
+<h3><u>Technology View:</u></h3>
+<img width="1918" height="1024" alt="Screenshot 2026-01-09 121850" src="https://github.com/user-attachments/assets/4a237d29-43f6-4ee9-89f8-0804eb0a3259" />
+
+
 
 
 
