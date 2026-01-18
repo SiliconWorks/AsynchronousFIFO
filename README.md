@@ -130,9 +130,8 @@ The numbers above the boxes represent the occupancy count (how many data slots a
 **FULL (7-8):** The buffer has reached its maximum capacity.
 
 **Error Conditions**
-The diagram shows two terminal "error" states that occur when the FIFO boundaries are ignored:
-**
-OVERFLOW: **This occurs if the system attempts to write (DATA_IN) more data when the state is already FULL. This results in data loss as there is no space left.
+
+**OVERFLOW:** This occurs if the system attempts to write (DATA_IN) more data when the state is already FULL. This results in data loss as there is no space left.
 
 **UNDERFLOW:** This occurs if the system attempts to read data when the state is EMPTY. This results in invalid data being passed to the next stage.
 
