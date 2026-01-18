@@ -1,10 +1,10 @@
 # Asynchornous-FIFO-
-<h3><u>Project Overview:</u></h3>
+<h3><u>PROJECT OVERVIEW:</u></h3>
                
                
 TThis project implements a parameterized Asynchronous FIFO in Verilog for reliable data transfer across independent clock domains. It ensures CDC safety by using Gray-code pointers and 2-FF synchronizers to prevent metastability. The design generates stable Full/Empty flags and is fully configurable for various data widths and depths. Functionality is verified through simulations covering wrap-around and simultaneous R/W boundary conditions.
 
-<h3><u>Problem statement:</u></h3>
+<h3><u>PROBLEM STATEMENT:</u></h3>
 
 In multi-clock digital systems, direct data transfer between asynchronous clock domains can cause metastability and data corruption.
 This project addresses the problem by designing a CDC-safe Asynchronous FIFO in Verilog HDL.
@@ -19,9 +19,9 @@ Conditions: 1.Set
             
 States    : Empty(0)  Almost Empty(1)  Partial conditio(2-5)  Almost Full(6)  Full(7)
 
-<h3><u>Features:</u></h3>
+<h3><u>FEATURES:</u></h3>
 
-FSM states:
+**FIFO states:**
          INPUT → EMPTY → PARTIALLY FULL → FULL → OUTPUT
          
 **Explanation:**
@@ -40,7 +40,7 @@ FULL (N): All entries occupied, write disabled, read enabled
 
 🔸Full/Empty flag logic driven by synchronized pointers.
 
-<h3><u>Tools & Hardware Used:</u></h3>
+<h3><u>TOOLS AND HARDWARE:</u></h3>
 
 FPGA: ZedBoard Zynq-7000
 
@@ -56,7 +56,7 @@ The below block diagram shows how the Asynchrnous FIFO works
 
 <img width="1920" height="1080" alt="UPDATED ASYNCHRNOUS FIFO BLOCK DIAGRAM" src="https://github.com/user-attachments/assets/31346058-27e9-4469-9c38-8aabfb646a8c" />
 
-<h3><u>  Read & Write operations: </u></h3>
+**Read & Write operations:**
 
 An Asynchronous FIFO enables safe data transfer between two independent clock domains using separate read and write pointers. There is no global FSM; instead, operation is controlled by pointer comparison and FULL/EMPTY flags.
 
@@ -119,7 +119,7 @@ Indicates no unread data is available
 FULL (Write Domain):
 Indicates FIFO has reached maximum capacity
 
-<h3><u>Asynchrnous FIFO states:</u></h3>
+<h3><u>ASYNCHRNOUS FIFO STATES:</u></h3>
 The below image indicates the FIFO states for the system of depth 8
 
 <img width="1239" height="693" alt="Screenshot 2026-01-18 111946" src="https://github.com/user-attachments/assets/ee41918a-f699-4587-9d81-27c6f015b0dc" />
@@ -143,20 +143,20 @@ The numbers above the boxes represent the occupancy count (how many data slots a
 
 **UNDERFLOW:** This occurs if the system attempts to read data when the state is EMPTY. This results in invalid data being passed to the next stage.
 
-<h3><u>Design.v:</u></h3>
+<h3><u>DESIGN:</u></h3>
 This design implements an asynchronous FIFO that allows safe data transfer between two independent clock domains (wr_clk and rd_clk). Design code for Asynchronous FIFO is given below
 https://github.com/duraimurugan9168-svg/Asynchornous-FIFO-/blob/4ce28261f496cd185193f750b2570918b65af8d4/FILES/design
 
-<h3><u>Testbench:</u></h3>
+<h3><u>TESTBENCH:</u></h3>
 The testbench verifies the functionality of the asynchronous FIFO by generating independent write and read clocks, applying reset, and driving controlled write and read enable signals.
 The Testbench code for Asyynchronous FIFO is given below
 https://github.com/duraimurugan9168-svg/Asynchornous-FIFO-/blob/dcd3d1ff93411345b0300af3cae70f11f1e331e9/FILES/testbench
 
-<h3><u>Simulation & Waveform:</u></h3>
+<h3><u>SIMULATION AND WAVEFORM:</u></h3>
 This waveform represents the functional simulation of an Asynchronous FIFO where write and read operations occur in different clock domains (wr_clk and rd_clk). The FIFO safely transfers data across clock domains using synchronized pointers.
 <img width="1919" height="1030" alt="Screenshot 2026-01-09 121448" src="https://github.com/user-attachments/assets/81e0a436-21f1-4e77-87ca-c9984ef71c64" />
 
-<h3><u>Technology View:</u></h3>
+<h3><u>TECHNOLOGY VIEW:</u></h3>
 <img width="1918" height="1024" alt="Screenshot 2026-01-09 121850" src="https://github.com/user-attachments/assets/4a237d29-43f6-4ee9-89f8-0804eb0a3259" />
 
 
