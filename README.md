@@ -120,22 +120,22 @@ FULL (Write Domain):
 Indicates FIFO has reached maximum capacity
 
 <h3><u>ASYNCHRNOUS FIFO STATES:</u></h3>
-The below image indicates the FIFO states for the system of depth 8
+The below image indicates the FIFO states 
 
-<img width="1239" height="693" alt="Screenshot 2026-01-18 111946" src="https://github.com/user-attachments/assets/ee41918a-f699-4587-9d81-27c6f015b0dc" />
+<img width="1241" height="696" alt="Screenshot 2026-01-20 094713" src="https://github.com/user-attachments/assets/79a7b671-3e1b-46b0-8e8b-64bbd190140f" />
 
 **State Breakdown (Depth 8)**
 The numbers above the boxes represent the occupancy count (how many data slots are currently filled).
 
-**EMPTY (0)**: The starting state. The buffer contains no data. Any attempt to read from here would typically trigger an Underflow.
+**EMPTY :** The starting state. The buffer contains no data. Any attempt to read from here would typically trigger an Underflow.
 
-**ALMOST EMPTY (1):** Only one slot is filled. This is a critical threshold state often used to signal the consumer to stop reading soon.
+**ALMOST EMPTY :** Only one slot is filled. This is a critical threshold state often used to signal the consumer to stop reading soon.
 
-**PARTIALLY FULL OR EMPTY (2-5):** The "normal" operating range. The FIFO is neither nearing its maximum capacity nor its empty state.
+**PARTIALLY FULL OR EMPTY :** The "normal" operating range. The FIFO is neither nearing its maximum capacity nor its empty state.
 
-**ALMOST FULL (6):** The buffer is nearing capacity. Only one or two slots remain. This signals the producer to slow down or stop writing.
+**ALMOST FULL :** The buffer is nearing capacity. Only one or two slots remain. This signals the producer to slow down or stop writing.
 
-**FULL (7-8):** The buffer has reached its maximum capacity.
+**FULL :** The buffer has reached its maximum capacity.
 
 **Error Conditions**
 
