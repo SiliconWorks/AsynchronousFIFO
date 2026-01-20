@@ -53,7 +53,8 @@ Verification: Vivado Simulator / Testbench for functional validation
 
 The below block diagram shows how the Asynchrnous FIFO works
 
-<img width="1920" height="1080" alt="UPDATED ASYNCHRNOUS FIFO BLOCK DIAGRAM" src="https://github.com/user-attachments/assets/31346058-27e9-4469-9c38-8aabfb646a8c" />
+<img width="1920" height="1080" alt="WRITE POINTER BLOCK" src="https://github.com/user-attachments/assets/f3ec50de-ef2f-40c1-af0d-c1ea826cfbff" />
+
 
 **Read & Write operations:**
 
