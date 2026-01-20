@@ -19,7 +19,7 @@ Conditions: 1.Set
 States    : INPUT → WRITE → READ → OUTPUT
 
 <h3><u>TABLE OF CONTENTS:</u></h3>
-
+1.[FEATURES](#features)
 
 <h3><u>FEATURES:</u></h3>
 
