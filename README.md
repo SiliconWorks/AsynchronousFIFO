@@ -11,18 +11,17 @@ This project addresses the problem by designing a CDC-safe Asynchronous FIFO in 
 The FIFO ensures reliable data transfer using Gray-code pointers and synchronized control logic.
 Correct operation is maintained under clock mismatch, pointer wrap-around, and boundary conditions
 
-Depth     : 8
 Inputs    : Binary Input
 
 Conditions: 1.Set
             2.Reset
             
-States    : Empty(0)  Almost Empty(1)  Partial conditio(2-5)  Almost Full(6)  Full(7)
+States    : INPUT → WRITE → READ → OUTPUT
 
 <h3><u>FEATURES:</u></h3>
 
 **FIFO states:**
-         INPUT → EMPTY → PARTIALLY FULL → FULL → OUTPUT
+         INPUT → WRITE → READ →  OUTPUT
          
 **Explanation:**
 
