@@ -37,7 +37,7 @@ set_property PACKAGE_PIN M15 [get_ports {sw_data[7]}] ;# SW7
 set_property IOSTANDARD LVCMOS33 [get_ports sw_data[*]]
 
 ############################################
-# FIFO DATA OUTPUT ? PMOD JB1
+# FIFO DATA OUTPUT - PMOD JB
 ############################################
 set_property PACKAGE_PIN W12 [get_ports {fifo_dout[0]}] ;# JB1
 set_property PACKAGE_PIN W11 [get_ports {fifo_dout[1]}] ;# JB2
@@ -66,10 +66,3 @@ set_property IOSTANDARD LVCMOS33 [get_ports led[*]]
 # CDC SYNCHRONIZER FALSE PATHS (OPTIONAL)
 ############################################
 set_false_path -through [get_cells -hierarchical *sync*]
-############################################
-# GENERATED CLOCK FOR rd_clk
-############################################
-create_generated_clock -name rd_clk \
-    -source [get_ports clk] \
-    -divide_by 2 \
-    [get_pins rd_clk_reg/Q]
