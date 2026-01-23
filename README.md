@@ -177,7 +177,8 @@ Durai Murugan M , Bannari Amman Institute of Technology     [LinkedIn](https://w
 
 
 
-Vasan T , Bannari Amman Institute of Technology
+Vasan T , Bannari Amman Institute of Technology            [LinkedIn](https://www.linkedin.com/in/vasan-t-799216364)
+
 
 
 <h3><u>NOTES:</u></h3>
