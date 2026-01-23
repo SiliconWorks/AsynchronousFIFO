@@ -164,7 +164,8 @@ This waveform represents the functional simulation of an Asynchronous FIFO where
 
 <h3><u>FILE STRUCTURE:</u></h3>
 
-<img width="759" height="526" alt="Screenshot 2026-01-20 085700" src="https://github.com/user-attachments/assets/7faba79f-8657-4fc7-b590-91d62b7ecb69" />
+<img width="1115" height="632" alt="File structure" src="https://github.com/user-attachments/assets/407967f0-7493-41d1-83c8-5d3e488eb32e" />
+
 
 
 <h3><u>CONCLUSION:</u></h3>
