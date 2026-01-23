@@ -66,3 +66,4 @@ set_property IOSTANDARD LVCMOS33 [get_ports led[*]]
 # CDC SYNCHRONIZER FALSE PATHS (OPTIONAL)
 ############################################
 set_false_path -through [get_cells -hierarchical *sync*]
+
