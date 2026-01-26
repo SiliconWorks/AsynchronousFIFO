@@ -8,7 +8,7 @@ This project implements a parameterized Asynchronous FIFO in Verilog for reliabl
 
 **Key contents:**
 
-- [Ptoblem statement](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#problem-statement)
+- [Problem statement](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#problem-statement)
 - [Features](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#features)
 - [Tools and Hardware](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#tools-and-hardware)
 - [Block diagram](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#--block-diagram-)
@@ -17,7 +17,7 @@ This project implements a parameterized Asynchronous FIFO in Verilog for reliabl
 - [Verilog Implementation](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#verilog-implementation)
 - [Simulation](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#simulation)
 - [Conclusion](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#conclusion)
-- 
+- [Contributors](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#contributors)
 <h3><u>PROBLEM STATEMENT:</u></h3>
 
 In multi-clock digital systems, direct data transfer between asynchronous clock domains can cause metastability and data corruption.
