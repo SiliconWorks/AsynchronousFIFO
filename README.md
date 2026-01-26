@@ -15,8 +15,8 @@ This project implements a parameterized Asynchronous FIFO in Verilog for reliabl
 - [Asynchronous FIFO states](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#asynchrnous-fifo-states)
 - [FIFO Table](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#fifo-timing-table)
 - [Verilog Implementation](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#verilog-implementation)
-- [Simulation and Implementation](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#simulation-and-waveform)
-
+- [Simulation](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#simulation)
+- 
 <h3><u>PROBLEM STATEMENT:</u></h3>
 
 In multi-clock digital systems, direct data transfer between asynchronous clock domains can cause metastability and data corruption.
@@ -216,17 +216,17 @@ The Testbench code for Asyynchronous FIFO is given below
 This waveform represents the functional simulation of an Asynchronous FIFO where write and read operations occur in different clock domains (wr_clk and rd_clk). The FIFO safely transfers data across clock domains using synchronized pointers.
 <img width="1919" height="1030" alt="Screenshot 2026-01-09 121448" src="https://github.com/user-attachments/assets/81e0a436-21f1-4e77-87ca-c9984ef71c64" />
 
-**Technical View:**
+**TECHNICA VIEW:**
 
 <img width="2550" height="3300" alt="TECHNICAL VIEW" src="https://github.com/user-attachments/assets/cc7ff76d-0e61-4385-89ab-9147d70c130d" />
 
 
 
 
-**Schematic View:**
+**SCHEMATIC VIEW:**
 <img width="3300" height="2550" alt="SCHEMATIC VIEW" src="https://github.com/user-attachments/assets/f1aaabf2-ea27-4986-a19d-1cc3e8e07cb0" />
 
-**File Structure:**
+**FILE STRUCTURE:**
 
 <img width="1115" height="632" alt="File structure" src="https://github.com/user-attachments/assets/407967f0-7493-41d1-83c8-5d3e488eb32e" />
 
