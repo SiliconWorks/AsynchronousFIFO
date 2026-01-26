@@ -23,6 +23,7 @@ States    : INPUT → WRITE → READ → OUTPUT
 
 - [Project overview](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#project-overview)
 - [Ptoblem statement](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#problem-statement)
+- [Features](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#features)
 
 
 <h3><u>FEATURES:</u></h3>
