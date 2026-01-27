@@ -57,13 +57,13 @@ FULL (N): All entries occupied, write disabled, read enabled
 
 <h3><u>TOOLS AND HARDWARE:</u></h3>
 
-FPGA: ZedBoard Zynq-7000
+**FPGA:** ZedBoard Zynq-7000
 
-HDL Tool: AMD Vivado 2024 Edition
+**HDL Tool:** AMD Vivado 2024 Edition
 
-Language: Verilog HDL
+**Language:** Verilog HDL
 
-Verification: Vivado Simulator / Testbench for functional validation
+**Verification:** Vivado Simulator / Testbench for functional validation
 
 <h3><u>  BLOCK DIAGRAM: </u></h3>
 
