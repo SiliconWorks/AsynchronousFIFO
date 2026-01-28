@@ -256,7 +256,8 @@ Durai Murugan M , Bannari Amman Institute of Technology     [LinkedIn](https://w
 
 
 
-Vasan T , Bannari Amman Institute of Technology            [LinkedIn](https://www.linkedin.com/in/vasan-t-799216364)
+Vasan T , Bannari Amman Institute of Technology            [LinkedIn](https://www.linkedin.com/in/vasan-t-7225x)
+
 
 
 Harish P , Bannari Amman Institute of Technology           [LinkedIn](https://www.linkedin.com/in/harish-p-493476355)
