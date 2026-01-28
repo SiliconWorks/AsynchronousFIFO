@@ -138,7 +138,7 @@ Indicates FIFO has reached maximum capacity
 <h3><u>ASYNCHRNOUS FIFO STATES:</u></h3>
 The below image indicates the FIFO states 
 
-<img width="1237" height="700" alt="image" src="https://github.com/user-attachments/assets/ccf270ef-8083-4400-b652-a38cda11ed63" />
+<img width="1240" height="701" alt="image" src="https://github.com/user-attachments/assets/432d89ff-c023-4fdf-8ee3-c3ce5860b088" />
 
 
 
