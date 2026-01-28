@@ -220,9 +220,13 @@ This waveform represents the functional simulation of an Asynchronous FIFO where
 
 
 
-**Output Video:**
+**Output :**
 
-The output video of Asynchrnous FIFO is given below
+FIFO in Zedboard Zynq 7000 FPGA :
+
+<img width="1572" height="901" alt="Your paragraph text (2)" src="https://github.com/user-attachments/assets/602d7965-997c-4028-b84d-c9afedf0c087" />
+
+The output Video of Asynchrnous FIFO is given below
 
 
 [Output video](https://drive.google.com/file/d/1viKmUqhM3-F26fnSBRfTKp3kEVEVbU0f/view?usp=drive_link)
