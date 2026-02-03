@@ -18,7 +18,7 @@ set_property PACKAGE_PIN P16 [get_ports sw_wr]
 set_property IOSTANDARD LVCMOS33 [get_ports sw_wr]
 
 ############################################
-# UNUSED (BTNR push button)
+# MODE SELECT (BTNR push button)
 ############################################
 set_property PACKAGE_PIN R18 [get_ports sw_rd]
 set_property IOSTANDARD LVCMOS33 [get_ports sw_rd]
@@ -65,5 +65,4 @@ set_property IOSTANDARD LVCMOS33 [get_ports led[*]]
 ############################################
 # CDC SYNCHRONIZER FALSE PATHS (OPTIONAL)
 ############################################
-set_false_path -through [get_cells -hierarchical *sync*]
-
+set_false_path -through [get_cells -hierarchical *ptr_gray_sync*]
