@@ -106,47 +106,47 @@ The below block diagram shows how the Asynchrnous FIFO works
 
 
 
-### **Async FIFO Operational Principle (Short)**
+### **Async FIFO Operational Principle**
 
 Although no global FSM is used, the FIFO implicitly operates in multiple modes, determined by pointer comparison and status flags:
 
 🟢 **WRITE MODE**
 
-wr_en = 1
+-  wr_en = 1
 
-full = 0
+-  full = 0
 
-Data is written safely into FIFO memory
+-  Data is written safely into FIFO memory
 
-Write pointer increments (Binary → Gray)
+-  Write pointer increments (Binary → Gray)
 
 🔵 **READ MODE**
 
-rd_en = 1
+-  rd_en = 1
 
-empty = 0
+-  empty = 0
 
-Data is read from FIFO memory
+-  Data is read from FIFO memory
 
-Read pointer increments (Binary → Gray)
+-  Read pointer increments (Binary → Gray)
 
 🔴 **FULL MODE**
 
-FIFO reaches maximum capacity
+-  FIFO reaches maximum capacity
 
-Write operations are automatically blocked
+-  Write operations are automatically blocked
 
-Read operations remain enabled
+-  Read operations remain enabled
 
 ⚪ **EMPTY MODE**
 
-FIFO contains no valid data
+-  FIFO contains no valid data
 
-Read operations are blocked
+-  Read operations are blocked
 
-Write operations remain enabled
+-  Write operations remain enabled
 
-📌 Mode selection is automatic and flag-driven, requiring no FSM — improving reliability across clock domains.
+**Mode selection is automatic and flag-driven**, requiring no FSM — improving reliability across clock domains.
 
 ---
 
