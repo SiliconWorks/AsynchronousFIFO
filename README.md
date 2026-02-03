@@ -111,7 +111,7 @@ The below block diagram shows how the Asynchrnous FIFO works
 
 Although no global FSM is used, the FIFO implicitly operates in multiple modes, determined by pointer comparison and status flags:
 
-🟢 **WRITE MODE**
+➤ **WRITE MODE**
 
 -  wr_en = 1
 
@@ -121,7 +121,7 @@ Although no global FSM is used, the FIFO implicitly operates in multiple modes, 
 
 -  Write pointer increments (Binary → Gray)
 
-🔵 **READ MODE**
+➤ **READ MODE**
 
 -  rd_en = 1
 
@@ -131,7 +131,7 @@ Although no global FSM is used, the FIFO implicitly operates in multiple modes, 
 
 -  Read pointer increments (Binary → Gray)
 
-🔴 **FULL MODE**
+➤ **FULL MODE**
 
 -  FIFO reaches maximum capacity
 
@@ -139,7 +139,7 @@ Although no global FSM is used, the FIFO implicitly operates in multiple modes, 
 
 -  Read operations remain enabled
 
-⚪ **EMPTY MODE**
+➤ **EMPTY MODE**
 
 -  FIFO contains no valid data
 
@@ -151,13 +151,13 @@ Although no global FSM is used, the FIFO implicitly operates in multiple modes, 
 
 
 
-**FULL & EMPTY Flag Generation:**
+ ➤ **FULL & EMPTY Flag Generation:**
 
--  **EMPTY (Read Domain):**
-Indicates no unread data is available
+ -  **EMPTY (Read Domain):**
+     Indicates no unread data is available
 
--  **FULL (Write Domain):**
-Indicates FIFO has reached maximum capacity
+ -  **FULL (Write Domain):**
+     Indicates FIFO has reached maximum capacity
 
 ---
 
