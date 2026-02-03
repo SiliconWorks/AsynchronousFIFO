@@ -104,9 +104,10 @@ The below block diagram shows how the Asynchrnous FIFO works
 
 - FULL / EMPTY flag generation
 
+---
 
 
-### **Async FIFO Operational Principle**
+### **Async FIFO Operational Principle:**
 
 Although no global FSM is used, the FIFO implicitly operates in multiple modes, determined by pointer comparison and status flags:
 
