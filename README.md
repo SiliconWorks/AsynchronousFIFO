@@ -145,38 +145,45 @@ Synchronize the Gray-coded write pointer to the read domain
 
 ### **Async FIFO Operational Principle (Short)**
 
-* **Write side** operates on `wr_clk`
+Although no global FSM is used, the FIFO implicitly operates in multiple modes, determined by pointer comparison and status flags:
 
-* **Read side** operates on `rd_clk`
+🟢 WRITE MODE
 
-* Pointers are kept in:
+wr_en = 1
 
-  * **Binary** → memory addressing
-  * **Gray code** → safe clock-domain crossing (CDC)
+full = 0
 
-* Gray-coded pointers are synchronized across domains using **2-FF synchronizers**
+Data is written safely into FIFO memory
 
----
+Write pointer increments (Binary → Gray)
 
- **Write Domain (`wr_clk`)**
+🔵 READ MODE
 
-* Write when `wr_en = 1` and `full = 0`
-* Actions:
+rd_en = 1
 
-  * Write data to memory
-  * Increment write pointer (binary → Gray)
-  * Sync write Gray pointer to read domain
+empty = 0
 
----
+Data is read from FIFO memory
 
- **Read Domain (`rd_clk`)**
+Read pointer increments (Binary → Gray)
 
-* Read when `rd_en = 1` and `empty = 0`
-* Actions:
+🔴 FULL MODE
 
-  * Read data from memory
-  * Increment read pointer (binary → Gray)
-  * Sync read Gray pointer to write domain
+FIFO reaches maximum capacity
+
+Write operations are automatically blocked
+
+Read operations remain enabled
+
+⚪ EMPTY MODE
+
+FIFO contains no valid data
+
+Read operations are blocked
+
+Write operations remain enabled
+
+📌 Mode selection is automatic and flag-driven, requiring no FSM — improving reliability across clock domains.
 
 ---
 
