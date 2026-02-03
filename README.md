@@ -64,7 +64,7 @@ FULL (N): All entries occupied, write disabled, read enabled
 
 **FPGA:** ZedBoard Zynq-7000
 
-**HDL Tool:** AMD Vivado 2024 Edition
+**HDL Tool:** AMD Vivado 2023 Edition
 
 **Language:** Verilog HDL
 
