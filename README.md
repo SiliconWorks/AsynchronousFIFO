@@ -1,4 +1,4 @@
-# Asynchornous-FIFO
+# Asynchronous-FIFO
 <h3><u>PROJECT OVERVIEW:</u></h3>
                
                
