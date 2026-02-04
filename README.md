@@ -266,7 +266,8 @@ This waveform represents the functional simulation of an Asynchronous FIFO where
 
 FIFO in Zedboard Zynq 7000 FPGA :
 
-<img width="1569" height="903" alt="Your paragraph text (5)" src="https://github.com/user-attachments/assets/59d447c3-9ac6-4033-aa43-afa75a7b0be6" />
+<img width="1545" height="870" alt="Your paragraph text (7)" src="https://github.com/user-attachments/assets/1222fd10-e739-41a3-8389-bf61c10a6cdd" />
+
 
 
 
