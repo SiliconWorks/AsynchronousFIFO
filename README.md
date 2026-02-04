@@ -312,12 +312,11 @@ Output behavior was verified using:
 
 <h3><u>CONTRIBUTORS:</u></h3>
 
-**Durai Murugan M** , Bannari Amman Institute of Technology   🔗[LinkedIn](https://www.linkedin.com/in/durai-murugan-859b67354)
-
-
 
 **Vasan T** , Bannari Amman Institute of Technology           🔗[LinkedIn](https://www.linkedin.com/in/vasan-t-7225x)
 
+
+**Durai Murugan M** , Bannari Amman Institute of Technology   🔗[LinkedIn](https://www.linkedin.com/in/durai-murugan-859b67354)
 
 
 **Harish P** , Bannari Amman Institute of Technology          🔗[LinkedIn](https://www.linkedin.com/in/harish-p-493476355)
