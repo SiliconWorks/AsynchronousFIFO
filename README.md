@@ -315,6 +315,11 @@ Output behavior was verified using:
 
 <img width="773" height="211" alt="Screenshot 2026-02-05 103526" src="https://github.com/user-attachments/assets/7adf0b75-e19e-4b58-84c6-20143dde02c0" />
 
+**Timing Summary:**
+
+
+<img width="876" height="225" alt="image (3)" src="https://github.com/user-attachments/assets/9e7efd18-d1a1-4dfd-8b32-d43c113604c4" />
+
 
 
 
