@@ -23,6 +23,7 @@ The FIFO supports robust flow control, boundary-condition handling, and debug-fr
 - [FIFO Table](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#fifo-timing-table)
 - [Verilog Implementation](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#verilog-implementation)
 - [Simulation](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#simulation)
+- [Synthesis Reports](https://github.com/SiliconWorks/AsynchronousFIFO/blob/main/README.md#-synthesis-reports--)
 - [Contributors](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#contributors)
 - [Conclusion](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#conclusion)
 
