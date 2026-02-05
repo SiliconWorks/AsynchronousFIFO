@@ -55,7 +55,7 @@ INPUT → WRITE → READ → OUTPUT
 
 <h3><u>FEATURES:</u></h3>
 
- ❖  Fully parameterized FIFO (Data Width & Depth)
+ ❖  Fully parameterized FIFO (Data Width : 8 & Depth : 8)
  
  ❖  Independent write and read clocks
  
